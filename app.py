@@ -265,8 +265,9 @@ def null(path: str) -> tuple[str, int]:
 
 # Always return 200 for testing purposes
 @app.route("/null/test/", methods=http_methods)
+@app.route("/null/test/<path:path>", methods=http_methods)
 def null_test():
-    return flask.request.method + " Test OK!"
+    return flask.request.method + " Test OK! - " + flask.request.environ["HTTP_X_FORWARDED_FOR"]
 
 
 # Handler that allows frontend to request page content and update site without full reload
