@@ -14,7 +14,7 @@ import RestrictedPython  # type:ignore
 
 # Site data
 domain_name = "multiplex64.pythonanywhere.com"
-repository_path = "https://github.com/Multiplex64/Multiplex64/"
+repository_path = "https://github.com/Multiplex64/Multiplex64_v1/"
 http_methods = [
     "GET",
     "POST",
